@@ -397,6 +397,7 @@
     - segment: RightLeg
     - segment: Hips
     - subtract: [Hips, RightLeg]
+      space: VirtualLab
       output: knee
     - multiply: [knee,[-1,-1,1]]
       output: knee_inv
@@ -410,6 +411,7 @@
   set: left
   steps:
     - segment: LeftLeg => shank
+      space: VirtualLab
     - convert: shank
       from: mm
       to: m
@@ -418,6 +420,7 @@
   set: right
   steps:
     - segment: RightLeg => shank
+      space: VirtualLab
     - convert: shank
       from: mm
       to: m
@@ -514,6 +517,7 @@
     - segment: RightFoot
     - segment: Hips
     - subtract: [Hips, RightFoot]
+      space: VirtualLab
       output: ankle
     - multiply: [ankle,[-1,-1,1]]
       output: ankle_inv
@@ -527,19 +531,19 @@
   set: left
   steps:
     - segment: LeftFoot => ankle
+      space: VirtualLab
     - convert: ankle
       from: mm
       to: m
-      space: VirtualLab
 
 - parameter: RIGHT_ANKLE
   set: right
   steps:
     - segment: RightFoot => ankle
+      space: VirtualLab
     - convert: ankle
       from: mm
       to: m
-      space: VirtualLab
 
 # ---
 
@@ -602,6 +606,7 @@
   set: left
   steps:
     - subtract: [LeftForeArm, Hips]
+      space: VirtualLab
       output: elbowPelvis
     - convert: elbowPelvis
       from: mm
@@ -611,6 +616,7 @@
   set: right
   steps:
     - subtract: [RightForeArm, Hips]
+      space: VirtualLab
       output: elbowPelvis
     - convert: elbowPelvis
       from: mm
@@ -622,6 +628,7 @@
   set: left
   steps:
     - subtract: [LeftHand, Hips]
+      space: VirtualLab
       output: wristPelvis
     - convert: wristPelvis
       from: mm
@@ -631,6 +638,7 @@
   set: right
   steps:
     - subtract: [RightHand, Hips]
+      space: VirtualLab
       output: wristPelvis
     - convert: wristPelvis
       from: mm
@@ -640,10 +648,10 @@
 - parameter: L_ankle_crossing_pelvis
   steps:
     - segment: Hips => pelvis
+      space: VirtualLab
     - convert: pelvis
       from: mm
       to: m
-      space: VirtualLab
       output: pel
     - subtract: [pel.x, LEFT_ANKLE.x]
 
