@@ -1483,6 +1483,31 @@
     - import: Right Ankle Angles_Velocity@R_Ankle_cross
 
 # Foot distance to body COG at footstrike
-# TO DO!!! We do not have body COG
+# using pelvis origin instead of body COG
+- parameter: Left_Foot_Distance_to_body_COG@LFS
+  steps:
+    - segment: LeftFoot => foot
+      space: VirtualLab
+    - segment: Hips => pelvis
+      space: VirtualLab
+    - subtract: [foot, pelvis]
+      output: foot_pelvis_dist_mm
+    - convert: foot_pelvis_dist_mm
+      from: mm
+      to: m
+      output: foot_pelvis_dist
+    - import: foot_pelvis_dist@LFS
 
-
+- parameter: Right_Foot_Distance_to_body_COG@RFS
+  steps:
+    - segment: RightFoot => foot
+      space: VirtualLab
+    - segment: Hips => pelvis
+      space: VirtualLab
+    - subtract: [foot, pelvis]
+      output: foot_pelvis_dist_mm
+    - convert: foot_pelvis_dist_mm
+      from: mm
+      to: m
+      output: foot_pelvis_dist
+    - import: foot_pelvis_dist@RFS
