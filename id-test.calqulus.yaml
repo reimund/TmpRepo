@@ -1,78 +1,96 @@
 # Left ankle kinetics
 - parameter: LeftAnkleForce
+  set: left
   steps:
     - import: [[LeftAnkle.fx, LeftAnkle.fy, LeftAnkle.fz]]
 
 - parameter: LeftAnkleMoment
+  set: left
   steps:
     - import: [[LeftAnkle.mx, LeftAnkle.my, LeftAnkle.mz]]
 
 - parameter: LeftAnklePower
+  set: left
   steps:
     - import: [[LeftAnkle.p]]
 
 # Left knee kinetics
 - parameter: LeftKneeForce
+  set: left
   steps:
     - import: [[LeftKnee.fx, LeftKnee.fy, LeftKnee.fz]]
 
 - parameter: LeftKneeMoment
+  set: left
   steps:
     - import: [[LeftKnee.mx, LeftKnee.my, LeftKnee.mz]]
 
 - parameter: LeftKneePower
+  set: left
   steps:
     - import: [[LeftKnee.p]]
 
 # Left hip kinetics
 - parameter: LeftHipForce
+  set: left
   steps:
     - import: [[LeftHip.fx, LeftHip.fy, LeftHip.fz]]
 
 - parameter: LeftHipMoment
+  set: left
   steps:
     - import: [[LeftHip.mx, LeftHip.my, LeftHip.mz]]
 
 - parameter: LeftHipPower
+  set: left
   steps:
     - import: [[LeftHip.p]]
 
 # Right ankle kinetics
 - parameter: RightAnkleForce
+  set: right
   steps:
     - import: [[RightAnkle.fx, RightAnkle.fy, RightAnkle.fz]]
 
 - parameter: RightAnkleMoment
+  set: right
   steps:
     - import: [[RightAnkle.mx, RightAnkle.my, RightAnkle.mz]]
 
 - parameter: RightAnklePower
+  set: right
   steps:
     - import: [[RightAnkle.p]]
 
 # Right knee kinetics
 - parameter: RightKneeForce
+  set: right
   steps:
     - import: [[RightKnee.fx, RightKnee.fy, RightKnee.fz]]
 
 - parameter: RightKneeMoment
+  set: right
   steps:
     - import: [[RightKnee.mx, RightKnee.my, RightKnee.mz]]
 
 - parameter: RightKneePower
+  set: right
   steps:
     - import: [[RightKnee.p]]
 
 # Right hip kinetics
 - parameter: RightHipForce
+  set: right
   steps:
     - import: [[RightHip.fx, RightHip.fy, RightHip.fz]]
 
 - parameter: RightHipMoment
+  set: right
   steps:
     - import: [[RightHip.mx, RightHip.my, RightHip.mz]]
 
 - parameter: RightHipPower
+  set: right
   steps:
     - import: [[RightHip.p]]
 
